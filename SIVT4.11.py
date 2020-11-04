@@ -1,5 +1,5 @@
 zavorky = input()
-def Valid(text):
+def LzePoskladat(text):
     oteviraci = []
     uzaviraci = []
     for i in text:
@@ -12,9 +12,9 @@ def Valid(text):
     else:
         return False
 
-print(Valid(zavorky))
+print(LzePoskladat(zavorky))
 
-def Valid2(text):
+def Valid(text):
     zavorky = []
     for i in text:
         print(i)
@@ -31,4 +31,4 @@ def Valid2(text):
     else:
         return False
 
-print(Valid2(zavorky))
+print(Valid(zavorky))
