@@ -59,13 +59,18 @@ def mirrorVertically():
     print("Mirroring was completed")
 
 def sinDisortion():
+    #TODO zachovat barvy = nesinovat třetí dimenzi
     waveHeight = image.shape[0] / 5
     waveMultiplier= 3/image.shape[1]
     for i in range(image.shape[1]):
         image[:,i] = np.roll(image[:,i],int(waveHeight * np.sin(2*np.pi*i * waveMultiplier)))
     print("Image was disorted")
 def tanDisortion():
-    pass
+    waveHeight = image.shape[0] / 3
+    waveMultiplier= 1/image.shape[1]
+    for i in range(image.shape[1]):
+        image[:,i] = np.roll(image[:,i],int(waveHeight * np.tan(2*np.pi*i * waveMultiplier)))
+
 def chcekInputAction(action):
     print("Processing...")
     if(action[:-2].lower() == "enhcol"):
