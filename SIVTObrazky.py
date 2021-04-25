@@ -2,6 +2,10 @@ import numpy as np
 from PIL import Image
 from os import path as pth
 
+#------------TODO-----------------
+#Add .png support ( = how to work with alpha channel?!)
+#Add more edit features
+
 def loadImage(path):
     print("Image loaded")
     return np.array(Image.open(path))
@@ -34,6 +38,7 @@ def invertColors():
     global image
     inverted_Image = abs(255 - image)
     image = inverted_Image
+    print("Colors were inverted")
    
 def toBlackAndWhite():
     for x in range(image.shape[0]):
